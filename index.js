@@ -45,7 +45,7 @@ app.get('/login',(req,res)=>{
     res.sendFile(path.join(publicPath, 'login.html'));
 })
 app.get('/logout',(req,res)=>{
-    res.redirect(`${baseUrl}/login`);
+    res.redirect(`${baseUrl}login`);
 })
 
 
