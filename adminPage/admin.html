@@ -73,9 +73,9 @@
         input{
             padding: 0.23rem;
             margin: 0.3rem;
-            font-size: 1.1em;
-            width: 700px;
-            max-width: 70vw;
+            font-size: 0.9em;
+            width: 600px;
+            max-width: 50vw;
         }
         input[type=file]{
             background-color: rgb(200, 200, 255);
@@ -104,42 +104,42 @@
         <h1>ADD A New College On Site</h1>
         <form id="collegeForm" action="/addCollege" method="post" enctype="multipart/form-data">
             <div>
-                <label for="college_name">College Name:</label>
+                <label for="college_name">College Name:</label><br>
                 <input type="text" required  name="college_name">
             </div>
             
             <div>
-                <label for="university_name">University Name:</label>
+                <label for="university_name">University Name:</label><br>
                 <input type="text" required  name="university_name">
             </div>
             
             <div>
-                <label for="college_type">College Type:</label>
+                <label for="college_type">College Type:</label><br>
                 <input type="text" required  name="college_type">
             </div>
 
             <div>
-                <label for="district_name">District Name:</label>
+                <label for="district_name">District Name:</label><br>
                 <input type="text" required  name="district_name">
             </div>
 
             <div>
-                <label for="state_name">State Name:</label>
+                <label for="state_name">State Name:</label><br>
                 <input type="text" required  name="state_name">
             </div>
 
             <div>
-                <label for="admission_fees">Addmission Fees:</label>
+                <label for="admission_fees">Addmission Fees:</label><br>
                 <input type="text" required  name="admission_fees">
             </div>
 
             <div>
-                <label for="semester_fees">Semester Fees:</label>
+                <label for="semester_fees">Semester Fees:</label><br>
                 <input type="text" required  name="semester_fees">
             </div>
 
            <div id="depertment">
-                <label for="department">Department:</label>
+                <label for="department">Department:</label><br>
                 <input type="text"   name="department" class="depertment">
            </div>
            <div style="justify-content:center; " >
@@ -148,7 +148,7 @@
 
 
             <div>
-                <label for="photo">College Photo:</label>
+                <label for="photo">College Photo:</label><br>
                 <input type="file" required  name="photo">
             </div>
             
