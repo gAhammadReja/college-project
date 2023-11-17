@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colpedia College Buddy - Explore a vast database of colleges in India, including courses offered, admission criteria, campus facilities, and more. Join us in the quest to make educational information accessible to all.">
+    <meta name="keywords" content="Colpedia College Buddy, colleges, education, courses, admission criteria, India">
+    <meta name="author" content="Golam Ahammad Reja">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+
+    </style>
+</head>
+<body contenteditable="false">
+    <div class="main" id="home">
+        <div class="top bg-first">
+            <div class="nav">
+                <h2>Colpedia College Buddy</h2>
+               <div class="menuBar" onclick="toggle('btns')">Menu</div>
+                <div class="btns none" id="btns">
+                    <button><a href="/">Home</a></button>
+                    <button><a href="/about">About</a></button>
+                    <button><a href="/contact">Contact</a></button>
+                    <button><a href="/blogs" target="_blank">Blogs</a></button>
+                    <button><a href="/login"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></button>
+                </div>
+            </div>
+            <div class="welcome">
+                <h1>Welcome To Colpedia College Buddy</h1><br>
+                <p style="padding: 20px 30px; background-color:rgba(238, 254, 254, 0.173) ; border-radius:50rem">
+                    Explore a vast database of colleges spanning diverse disciplines, from engineering and medicine to
+                    arts and social sciences. Each college profile offers key information such as courses offered,
+                    admission criteria, campus facilities, faculty credentials, and more. <br><br> Join us in this quest to make
+                    educational information accessible to all, and let's embark on the exciting journey of discovering
+                    the best colleges that India has to offer. Your future begins here! <br>
+                </p><br>
+                <div style="display: flex;flex-wrap:wrap;justify-content:center">
+                    <input type="search" name="sCollege" id="collegeSearch" placeholder="Search A College">
+                    <button style="margin: 2% 0; " ><a href="#colleges">Explore All Colleges</a></button>
+                </div>
+
+        </div>
+        </div>     
+    </div>
+    <!-- left -->
+<div style="display: flex;flex-wrap:wrap-reverse;align-items:baseline; justify-content:space-evenly;">
+    <div class="left" style="min-height: 30vh;">
+        <!-- All colleges -->
+        <div class="topColleges">
+            <h1><span id="streamHead" >All</span> Colleges In <span id="stateHead" contenteditable="false">West Bengal</span><span>&nbsp;&nbsp;&nbsp;௹</span></h1>
+            <div class="colleges" id="colleges">
+                <!-- BEFORE FETCH DATA VIEW-->
+    <div class="onLoading"><h1></h1><div class="flex"><div></div><div></div><div></div><div></div></div></div><br>
+    <div class="onLoading"><h1></h1><div class="flex"><div></div><div></div><div></div><div></div></div></div><br>
+    <div class="onLoading"><h1></h1><div class="flex"><div></div><div></div><div></div><div></div></div></div>
+                <!-- END -->
+            </div>
+        </div>
+    </div>
+    <div class="myFilter" style="padding:10px">
+     <button><h2 onclick="toggle('filter')">Coustom Filter</h2></button>
+        <div class="myFilter none" id="filter" style="box-shadow:0 0 0;">
+            <!-- <div>
+                <label for="state">CHOOSE A STATE</label><br>
+            <select name="state" id="">
+                <option value="" selected disabled>--Choose A State--</option>
+
+                <option value="west bengal">West Bengal</option>
+            </select>&nbsp;&nbsp;<button class="button" onclick="filter()">go</button>
+            </div> -->
+            <div>
+                <label for="district">CHOOSE A DISTRICT</label><br>
+            <select name="district" id="district">
+                <option value="" selected disabled>--Choose A District--</option>
+                <option value="Murshidabad">Murshidabad</option>
+                <option value="Nadia">Nadia</option>
+                <option value="Kolkatta">Kolkatta</option>
+            </select>&nbsp;&nbsp;<button class="button" id="districtFilter">Go</button>
+            </div>
+            <div>
+                <label for="stream">FIND A COURSE</label><br>
+            <select name="stream" id="stream">
+                <option value="">--Find A Course--</option>
+                <option value="bca">BCA</option>
+                <option value="bba">BBA</option>
+                <option value="ba">BA</option>
+                <option value="bsc">BSc</option>
+            </select>&nbsp;&nbsp;<button class="button" id="streamFilter">Go</button>
+            </div>
+    <div onclick="location.reload()"><i class="fa fa-refresh" aria-hidden="true" style="cursor: pointer;">REFRESH</i></div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- bottom -->
+
+<section class="sectionBottom">
+    <!-- <div class="importantLinks">
+        <div class="btn-action p05 m05"><a href="#home">Home</a>
+        </div>
+        <div class="btn-action p05 m05"><a href="/about.html">About</a></div>
+        <div class="btn-action p05 m05"><a href="/contact.html
+            ">Contact</a></div>
+        <div class="btn-action p05 m05"><a href="/pages/#colleges">Colleges</a></div>
+        <div class="btn-action p05 m05"><a href="/blogs">Bloogs</a></div>
+        <div class="btn-action p05 m05"><a href="/blogs">Bloogs</a></div>
+    </div> <div class="importantLinks">
+        <div class="btn-action p05 m05">UGC</div>
+        <div class="btn-action p05 m05">UGC</div>
+        <div class="btn-action p05 m05">UGC</div>
+        <div class="btn-action p05 m05">UGC</div>
+        <div class="btn-action p05 m05">UGC</div>
+        <div class="btn-action p05 m05">UGC</div>
+    </div> -->
+    <!-- <div class="p10 uploadCollege" style="margin: 0;">
+        <form class="" action="mailto:ahammad2reja@gmail.com">
+            <h2 style="text-align: center;">Send Request To Add / Update Your College Data</h2>
+            <fieldset class="bg-pri">
+                <label for="college">College Name*</label>
+                <input required type="text"><br><label for="college">Courses Available</label>
+                <input required type="text"><br>
+                <label for="college">University Name*</label>
+                <input required type="text"><br>
+                <label for="college">District Name*</label>
+                <input required type="text"><br>
+                <label for="college">State Name*</label>
+                <input required type="text"><br><br>
+
+            </fieldset>
+            <div class="p05 bg-pri" style="border: 1px solid black; ">
+                <input class="checkbox" type="checkbox" name="checkboxCollegeData" id=""><label
+                    for="checkboxCollegeData">All the information are checked</label>
+            </div>
+            <div class="p10" style="text-align: center;">
+                <button class="btn-done" style="margin: auto;">Send To Mail</button>
+            </div>
+        </form>
+    </div> -->
+</section>
+<section class="footer">
+    <footer>
+        copyrights&copy; reserved by classBuudyJr 2023
+    </footer>
+</section>
+</section>
+
+<!-- bottom end -->
+
+
+<script src="https://kit.fontawesome.com/4d4b411082.js" crossorigin="anonymous"></script>
+</body>
+
+<!-- <script src="/data/node.js"></script> -->
+<script src="script/index.js"></script>
+<script>
+    //javascript
+</script>
+</html>

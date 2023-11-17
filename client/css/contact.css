@@ -1,0 +1,95 @@
+@import url(/css/utility.css);
+a{
+    color: white;
+    text-decoration: none;  
+    }
+.flex{
+    display: flex;
+}
+.container ,.container_one {
+    width: 600px;
+    max-width: 90vw;
+    margin: 50px auto;
+    font-family: 'Arial Narrow', sans-serif;
+    font-size: 1.2rem;
+    padding: 20px;}
+    .container{
+
+        border-radius: 5px;
+        box-shadow: 0 0 1px rgb(0, 0, 0);
+        background-color: rgba(208, 219, 235, 0.263);
+    }
+.backgroundImg{
+    background: url('https://source.unsplash.com/random/1900x500/?desktop');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.h1{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    max-height: 90vw;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(119, 1, 155, 0.726),rgba(2, 4, 56, 0.812));
+    color: white;
+}
+.h2{
+    text-align: center;
+    margin-top: 6vh;
+}
+form {
+    display: grid;
+    gap: 10px;
+
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: auto;
+}
+
+button {
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h4{
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+@media screen and (max-width:1280px) {
+
+    html,
+    body {
+    font-size: 14px;
+    
+    }
+     .left{
+    min-width: 98vw;
+    }
+    
+    .none{
+        display: none;
+        }
+    } 
+@media screen and (max-width:720px) {
+    .flex{
+        flex-wrap: wrap;
+    }
+    .backgroundImg{
+        background-image: url('https://source.unsplash.com/random/600x600/?desktop');
+    }
+}

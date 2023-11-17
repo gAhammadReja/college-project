@@ -1,0 +1,228 @@
+@import url(/css/utility.css);
+@import url(/css/onLoading.css);
+
+/* .logo img:hover{
+rotate: 360deg;
+} */
+
+.top {
+    height: 60vh;
+    max-height: 110vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main{
+background: url('https://source.unsplash.com/random/1200x500/?college,building,books');
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+.bg-first {
+    background: linear-gradient(rgba(0, 0, 0, 0.762), rgba(23, 1, 43, 0.779));
+    
+}
+
+#collegeSearch {
+    padding: 0.51rem 2rem;
+    margin: 1rem;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(20, 0, 48, 0.873);
+    border: 1px solid red;
+    transition: all ease-in-out 1s;
+    font-size: 1rem;
+
+}
+
+.welcome {
+    margin: auto auto;
+    padding: 5px;
+    margin-bottom: 0;
+    max-width: 1500px;
+}
+
+.welcome h1 {
+    margin: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#collegeSearch {
+    display: block;
+    width: 60%;
+    margin: 2% 5%;
+    background-color: rgba(0, 0, 0, 0.45);
+
+}
+
+/*left*/
+.left{
+width: 70%;
+padding: 1vh 0;
+}
+.topColleges h1{
+text-align: center;
+}
+#colleges{
+    margin: 1rem;
+    box-shadow: 0 0 10px rgb(59, 89, 84);
+    border-radius: 1rem 0 0 1rem;
+    height: fit-content;
+    /* overflow: hidden; */
+}
+#colleges h1{
+    text-shadow: -1px 1px 2px rgb(28, 49, 119);
+    color: var(--special);
+    margin-bottom: 1rem;
+}
+.colleges{
+padding: 2%;
+font-size: 1.1em;
+max-height: 100vh;
+overflow-y: scroll;
+}.colleges p{
+height: fit-content;
+margin:.51rem 0;
+padding: .41rem 1rem;
+border-radius: 1rem;
+box-shadow: 0px 0px 2px black;
+}.colleges p span{
+display: inline-block;
+margin: .61rem 1rem;
+width: 75%;
+}
+.colleges p div{
+font-size: 1.3em;
+font-weight: 600;
+color: rgb(76, 0, 255);
+}.button{
+margin: 5px 0;
+padding: 5px;
+font-size: 1rem;
+
+}
+.myFilter {
+display: flex;
+flex-wrap: wrap;
+width: 400px;
+
+max-width: 98vw;
+justify-content: center;
+}.myFilter div{
+width: 85%;
+margin: 5px;
+box-shadow: 2px -2px 5PX black;
+border-radius: 10px;
+padding: 5PX;
+text-align: center;
+font-weight: 500;
+}
+select{
+padding: 5px 10px;
+width: 80%;
+}
+option{
+background-color: rgb(6, 44, 120);
+color: whitesmoke;
+}a{
+color: white;
+text-decoration: none;  
+}
+
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    /* height: 400px; */
+    width: 100%;
+    /* min-width: 40rem; */
+
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    /* min-width: 40rem; */
+    /* height: 400px; */
+}
+
+.gmap_iframe {
+    width: 24vw;
+    height: 24vw;
+    /* min-width: 40rem; */
+
+    /* height: 400px !important; */
+}
+
+.sectionBottom{
+    background-color: rgba(1, 2, 26, 0.846);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.footer{
+background-color: var(--special);
+padding: 1rem;
+text-align: center;
+text-transform: capitalize;
+}
+
+fieldset,fieldset input,fieldset label{
+    padding: 5px;
+    font-size: 1rem;
+}
+fieldset input{
+    display: block;
+    width: 96%;
+    margin: auto;
+}
+fieldset label{
+    display: block;
+}
+
+.uploadCollege{
+    max-width: 55vw;
+    width: 500px;
+}
+.uploadCollege form h2{
+    color: whitesmoke;
+}
+
+
+@media screen and (max-width:1280px) {
+
+html,
+body {
+font-size: 14px;
+
+}
+ .left{
+min-width: 98vw;
+}
+
+.none{
+    display: none;
+    }
+}      
+  @media screen and (max-width:600px) {
+
+html,
+body {
+font-size: 11px;
+
+}
+}
+
+
+.CollegeDetails{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:10px;padding:10px 5px;box-shadow: 0 0 2px;
+    font-weight: 600;
+    color: rgb(56, 5, 104);
+    border-radius: 4px;
+}
