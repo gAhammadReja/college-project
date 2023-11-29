@@ -13,6 +13,25 @@ async function getFilterColleges(req, res) {
   }
 }
 
+async function collgesForAdminPanel(req, res) {
+  try {
+    let collegesForAdmin = await College.find(req.query,{"_id":1,"college_name":1,"district_name":1});
+    console.log(collegesForAdmin)
+    res.json(collegesForAdmin);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to retrieve colleges' });
+  }
+}
+
+async function deleteCollege(req, res) {
+  const id = req.params._id;
+  try {
+    await College.deleteOne({"_id": id});
+    res.status(200).send('College deleted successfully');
+  } catch (error) {
+    res.status(500).send('Error deleting college');
+  }
+}
 
 
-export { getFilterColleges };
+export { getFilterColleges, collgesForAdminPanel ,deleteCollege};
