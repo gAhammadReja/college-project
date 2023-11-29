@@ -13,13 +13,14 @@ function myCollege(college,photo,college_type,semester_fees,addmission_fees,depa
     <div>
 <h1 class="bg-pri p05">${college}</h1>
 <div class="profile">
-<img src='https://collegeserver.onrender.com/photos/${photo}' alt="Welcome To ${college}" class="profileImage">
-    <div class="mapouter">
-    <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no"
-            marginheight="0" marginwidth="0"
-            src="${MySrc}"></iframe>
-        </div>
+<img src='https://collegeserver.onrender.com//photos/${photo}' alt="Welcome To ${college}" class="profileImage">
+<div class="mapouter">
+<div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no"
+        marginheight="0" marginwidth="0"
+        src="${MySrc}"></iframe>
     </div>
+</div>
+   <div>
 </div>
 <div style="display:flex;flex-wrap:wrap">
 <div class="CollegeDetails">College Type : ${college_type}</div>
@@ -29,7 +30,7 @@ function myCollege(college,photo,college_type,semester_fees,addmission_fees,depa
 <div class="CollegeDetails">District Name : ${district}</div>
 <div class="CollegeDetails">State Name : ${state}</div>
 </div>
-<h2 class="btn-cancel" onclick="filterCollege('https://collegeserver.onrender.com/filter')"> BACK </h2>
+<h2 class="btn-cancel" onclick="filterCollege('https://collegeserver.onrender.com//filter')"> BACK </h2>
     </div>
     `;
 }
@@ -41,18 +42,18 @@ function toggle(id){
 document.getElementById('districtFilter').addEventListener("click",()=>{
     let filterName;
     filterName = document.getElementById('district').options[document.getElementById('district').selectedIndex].value;
-    let url = `https://collegeserver.onrender.com/filter?district_name=${filterName}`;
+    let url = `https://collegeserver.onrender.com//filter?district_name=${filterName}`;
     filterCollege(url);
 })
 document.getElementById('streamFilter').addEventListener("click",()=>{
     let filterName;
     filterName = document.getElementById('stream').options[document.getElementById('stream').selectedIndex].value;
     alert(filterName)
-    let url = `https://collegeserver.onrender.com/filter?department=${filterName}`;
+    let url = `https://collegeserver.onrender.com//filter?department=${filterName}`;
     filterCollege(url);
 })
 document.getElementById('collegeSearch').addEventListener("keyup",()=>{
-    let url = `https://collegeserver.onrender.com/filter`;
+    let url = `https://collegeserver.onrender.com//filter`;
     filterCollege(url);
 })
 function filterCollege(url){
@@ -87,4 +88,6 @@ function filterCollege(url){
     });
 }
 
-window.onload(filterCollege(`https://collegeserver.onrender.com/filter`))
+window.onload = function() {
+    filterCollege('https://collegeserver.onrender.com//filter');
+};
