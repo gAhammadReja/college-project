@@ -284,7 +284,7 @@ footer {
     </div>
 <!-- <div>View And Update All Colleges</div> -->
 <div id="AllColleges">
-<div onclick="deleteCollege()" class="add-department-btn" style="background-color: rgb(188, 11, 11);">View And Delete A College</div>
+<h1 style="background-color: rgb(188, 11, 11); text-align:center">View And Delete A College</h1>
 </div>
 
 <script>
@@ -335,8 +335,6 @@ footer {
   <!-- get colleges and delete -->
   <script>
 //get college API
-function deleteCollege(){
-    
 let allCollege = fetch('https://collegeserver.onrender.com/collegesAdminPanel');
 allCollege.then(response=>{
     if(!response.ok){
@@ -385,7 +383,6 @@ if (confirm == 'D' || confirm == 'd'){
 }
 }
 
-}
   </script>
 
   <footer>
