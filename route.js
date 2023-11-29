@@ -15,10 +15,10 @@ const router = express.Router();
 const adminPage = path.join(__dirname, 'adminPage', 'admin.html')
 router.post('/admin',(req,res)=>{
     const { user, password } = req.body;
-    if (user === '0000') {
+    if (user === 'ahammad@321' && password==='87654321') {
         res.sendFile(adminPage)
     }else{
-        res.send('Get Out')
+        res.send('Wrong Password Or Username')
     }
 })
 
@@ -49,5 +49,9 @@ router.post('/addCollege', upload, async (req, res) => {
 });
 
   
+
+// router of api for delete a intem from database using id 
+
+
 
 export default router;
