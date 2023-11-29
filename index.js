@@ -7,7 +7,7 @@ import Routes from './route.js'
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { getFilterColleges } from './controller.js'
+import { getFilterColleges, collgesForAdminPanel , deleteCollege} from './controller.js'
 
 // import nodemailer from 'nodemailer'
 dotenv.config();
@@ -36,7 +36,7 @@ app.get('/about',(req,res)=>{
     res.sendFile(path.join(publicPath, 'about.html'));
 })
 app.get('/contact',(req,res)=>{
-    res.sendFile(path.join(publicPath, 'about.html'));
+    res.sendFile(path.join(publicPath, 'contact.html'));
 })
 app.get('/blogs',(req,res)=>{
     res.redirect('https://infotbangla.blogspot.com/');
@@ -44,9 +44,7 @@ app.get('/blogs',(req,res)=>{
 app.get('/login',(req,res)=>{
     res.sendFile(path.join(publicPath, 'login.html'));
 })
-app.get('/logout',(req,res)=>{
-    res.redirect(`${baseUrl}login`);
-})
+
 
 
 
@@ -61,9 +59,14 @@ app.use(express.json())
 app.use('/', Routes);
 
 
-
+//send all colleges full data
 app.get('/filter', getFilterColleges);
 
+// send only district id and college name
+app.get('/collegesAdminPanel', collgesForAdminPanel);
+
+//delete college api
+app.post('/deleteCollege/:_id',deleteCollege);
 
 app.get('/photos/:imageName',(req,res)=>{
     const imageName = req.params.imageName;
