@@ -337,7 +337,7 @@ footer {
 //get college API
 function deleteCollege(){
     
-let allCollege = fetch('https://collegeserver.onrender.com//collegesAdminPanel');
+let allCollege = fetch('https://collegeserver.onrender.com/collegesAdminPanel');
 allCollege.then(response=>{
     if(!response.ok){
         throw new Error(`HTTP error ! Status: ${response.status}`);
@@ -363,7 +363,7 @@ allCollege.then(response=>{
     })
 })
 async function deleteCollege(id) {
-    const url = `https://collegeserver.onrender.com//deleteCollege/${id}`;
+    const url = `https://collegeserver.onrender.com/deleteCollege/${id}`;
 let confirm = prompt("Type 'D' For Confirmation");
 if (confirm == 'D' || confirm == 'd'){
     try {
