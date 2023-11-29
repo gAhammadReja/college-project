@@ -136,10 +136,7 @@ text-decoration: none;
 
 .mapouter {
     position: relative;
-    text-align: right;
-    /* height: 400px; */
     width: 100%;
-    /* min-width: 40rem; */
 
 }
 
@@ -152,8 +149,9 @@ text-decoration: none;
 }
 
 .gmap_iframe {
-    width: 24vw;
-    height: 24vw;
+    width: 450px;
+
+    height: 400px;
     /* min-width: 40rem; */
 
     /* height: 400px !important; */
