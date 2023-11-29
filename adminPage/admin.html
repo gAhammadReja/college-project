@@ -5,149 +5,275 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Colepediya Admin Panel</title>
     <style>
-        *{
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        body{
-            background: linear-gradient(orange,white,white,green);
+        
+        body {
+            background-color: rgb(186, 221, 210);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
-        nav div{
+        
+        nav div {
             background-color: rgba(34, 3, 80, 0.769);
             color: aliceblue;
             display: flex;
-            justify-content: space-evenly;
-            padding: 20px 5%;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 1.8em;
-            
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            font-size: 1.4em;
         }
-        nav div h2{
+        
+        nav div h2 {
             text-shadow: 0 0 10px rgb(0, 110, 255);
         }
-        nav div h5{
+        
+        nav div h5 {
             display: flex;
             background-color: rgb(10, 14, 49);
             align-items: center;
             padding: 10px;
             border-radius: 5px;
-        }nav div h5:hover{
+            text-decoration: none;
+            color: whitesmoke;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        
+        nav div h5:hover {
             background-color: rgb(157, 14, 14);
             box-shadow: -1px -1px 4px black;
-            cursor: pointer;
         }
-        a{
-            cursor: pointer;
-        }
-        .main{
+        
+        .main {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .main h1{
-            box-sizing: border-box;
-            width: 100%;
+        
+        .main h1 {
+            width: fit-content;
             text-align: center;
-            padding:25px;
+            padding: 15px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: rgba(57, 30, 118, 0.688);
-            color: white;
+            color: rgb(0, 0, 87);
+            margin:0 5%;
         }
-        form{
-            margin: 7vh 0;
+        
+        form {
             border: 2px solid;
             border-radius: 5px;
             background-color: rgba(148, 160, 255, 0.416);
+            width: 100%;
+            max-width: 700px;
+            padding: 20px;
         }
-        form div{
-/*             display: flex; */
-/*             justify-content: right; */
-/*             align-items: center; */
-            font-size: 1.3em;
-            font-weight: 600;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            border: 1px solid;
-            padding:10px;
+        
+        form div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
         }
-        input{
-            padding: 0.23rem;
-            margin: 0.3rem;
-            font-size: 0.9em;
-            width: 600px;
-            max-width: 50vw;
+        
+        input {
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
-        input[type=file]{
+        
+        input[type=file] {
             background-color: rgb(200, 200, 255);
-            border: 1px solid;
+            cursor: pointer;
         }
-        input[type=submit]{
-            width: fit-content;
-            margin:10px auto;
+        
+        input[type=submit] {
+            width: 100%;
+            margin: 10px auto;
             background-color: rgb(32, 32, 210);
             border-radius: 4px;
             color: white;
             font-weight: 700;
             cursor: pointer;
         }
+/* Style for the "Add Department" button */
+.add-department-btn {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgb(0, 212, 141);
+    border: none;
+    border-radius: 5px;
+    color: rgb(6, 15, 87);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.add-department-btn:hover {
+    background-color: rgb(0, 162, 101);
+    color: white;
+}
+
+        .colleges {
+            display: flex;
+            justify-content: space-between; /* Adjust as needed */
+            align-items: center;
+            box-shadow: 3px 3px 0;
+            font-size: 1.1em;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0 2vw;
+            font-weight: 600;
+            flex-wrap: wrap; /* Allow content to wrap to the next line */
+        }
         
+        .colleges div {
+            margin: 3px; /* Reduced margin for spacing */
+            padding: 6px; /* Reduced padding for spacing */
+            border-radius: 5px;
+        }
+     
+        .dlt-btn {
+            background-color: rgb(216, 18, 18);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            cursor: pointer;
+        }
+        
+        .dlt-btn:hover {
+            background-color: rgb(255, 50, 50);
+            color: white;
+        }
+        
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0 0 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h2 {
+    color: #00bcd4;
+}
+
+.footer-section p {
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #00bcd4;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #111;
+}
+
+.footer-bottom p {
+    font-size: 0.8em;
+}
+
+
+        @media screen and (max-width: 768px) {
+            nav div {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            nav div h5 {
+                margin-top: 10px;
+            }
+        
+            .main {
+                margin: 5vh 5%;
+            }
+        }
+        
+
     </style>
   </head>
   <body  onload="preventBack()">
     <nav>
       <div>
         <h2>Welcome To Colepediya Admin Panel</h2>
-        <a href="/logout" style="text-decoration: none; color:whitesmoke"><h5>Log Out</h5></a>
+        <a href="/" style="text-decoration: none; color:whitesmoke"><h5>Log Out</h5></a>
       </div>
     </nav>
     <div class="main">
-        <h1>ADD A New College On Site</h1>
+        <h1>ADD A NEW COLLEGE ON SITE</h1>
+
         <form id="collegeForm" action="/addCollege" method="post" enctype="multipart/form-data">
             <div>
-                <label for="college_name">College Name:</label><br>
+                <label for="college_name">College Name:</label>
                 <input type="text" required  name="college_name">
             </div>
             
             <div>
-                <label for="university_name">University Name:</label><br>
+                <label for="university_name">University Name:</label>
                 <input type="text" required  name="university_name">
             </div>
             
             <div>
-                <label for="college_type">College Type:</label><br>
+                <label for="college_type">College Type:</label>
                 <input type="text" required  name="college_type">
             </div>
 
             <div>
-                <label for="district_name">District Name:</label><br>
+                <label for="district_name">District Name:</label>
                 <input type="text" required  name="district_name">
             </div>
 
             <div>
-                <label for="state_name">State Name:</label><br>
+                <label for="state_name">State Name:</label>
                 <input type="text" required  name="state_name">
             </div>
 
             <div>
-                <label for="admission_fees">Addmission Fees:</label><br>
+                <label for="admission_fees">Addmission Fees:</label>
                 <input type="text" required  name="admission_fees">
             </div>
 
             <div>
-                <label for="semester_fees">Semester Fees:</label><br>
+                <label for="semester_fees">Semester Fees:</label>
                 <input type="text" required  name="semester_fees">
             </div>
 
            <div id="depertment">
-                <label for="department">Department:</label><br>
-                <input type="text"   name="department" class="depertment">
+                <label for="department">Department:</label>
+                <input type="text" name="department" class="department" oninput="this.value = this.value.toUpperCase()">
            </div>
            <div style="justify-content:center; " >
-            <div onclick="addDepertment()" style="padding: 0 4px; margin:-4px; cursor:pointer; background-color:rgb(0, 212, 141); border-radius:5px;color:rgb(6, 15, 87)">ADD DEPERTMENT<span style="font-size:1.4em">+</span></div>
+            <div class="add-department-btn" onclick="addDepertment()">ADD DEPERTMENT + </div>
         </div>
 
 
             <div>
-                <label for="photo">College Photo:</label><br>
+                <label for="photo">College Photo:</label>
                 <input type="file" required  name="photo">
             </div>
             
@@ -157,6 +283,9 @@
         </form>
     </div>
 <!-- <div>View And Update All Colleges</div> -->
+<div id="AllColleges">
+<div onclick="deleteCollege()" class="add-department-btn" style="background-color: rgb(188, 11, 11);">View And Delete A College</div>
+</div>
 
 <script>
     // This function prevents back navigation to authenticated pages
@@ -168,8 +297,7 @@
 
   <script>
     const form = document.getElementById('collegeForm');
-    
-  
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       // Create a FormData object to serialize the form data
@@ -204,6 +332,88 @@
         insertAfter(dep,newNode)
     }
   </script>
-  
+  <!-- get colleges and delete -->
+  <script>
+//get college API
+function deleteCollege(){
+    
+let allCollege = fetch('https://collegeserver.onrender.com//collegesAdminPanel');
+allCollege.then(response=>{
+    if(!response.ok){
+        throw new Error(`HTTP error ! Status: ${response.status}`);
+    }
+    return response.json();
+})
+.then(data=>{
+    //console.log(data);
+    let AllColleges = document.getElementById('AllColleges');
+    data.forEach(college=>{
+        //console.log(college.college_name)
+        let div = document.createElement('div');
+        let id = college._id;
+        div.innerHTML = `
+        <div class="colleges">
+            <div><div id="name">${college.college_name}</div> </div>
+        <div><div class="district">${college.district_name}</div> </div>
+        <div class="dlt-btn"><div onclick="deleteCollege('${id}')">DELETE</div>
+    </div>
+        </div>
+        `;
+        AllColleges.appendChild(div);
+    })
+})
+async function deleteCollege(id) {
+    const url = `https://collegeserver.onrender.com//deleteCollege/${id}`;
+let confirm = prompt("Type 'D' For Confirmation");
+if (confirm == 'D' || confirm == 'd'){
+    try {
+        const response = await fetch(url, {
+            method: 'POST', // or 'DELETE'
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        } else {
+            console.log(`College with ID ${id} deleted successfully.`);
+            window.location.reload();
+        }
+    } catch (error) {
+        console.log(`There was an error: ${error}`);
+    }
+}else{
+    alert("Item Not Deleted")
+}
+}
+
+}
+  </script>
+
+  <footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>Your website description goes here.</p>
+        </div>
+
+        <div class="footer-section contact">
+            <h2>Contact Information</h2>
+            <p>Email: bwebsite865@gmail.com</p>
+            <p>Phone: +91 7501728816</p>
+        </div>
+
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2023 Class Buddy JR. All rights reserved.</p>
+    </div>
+</footer>
   </body>
 </html>
