@@ -8,10 +8,13 @@
     <meta name="keywords" content="Colpedia College Buddy, colleges, education, courses, admission criteria, India">
     <meta name="author" content="Golam Ahammad Reja">
     
-    <title>Colpedia College Buddy</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
     <style>
-
+.btn-action{
+    width: 95%;
+    font-size: 1rem;
+}
     </style>
 </head>
 <body contenteditable="false">
@@ -84,10 +87,12 @@
                 <label for="stream">FIND A COURSE</label><br>
             <select name="stream" id="stream">
                 <option value="">--Find A Course--</option>
-                <option value="bca">BCA</option>
-                <option value="bba">BBA</option>
-                <option value="ba">BA</option>
-                <option value="bsc">BSc</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="BA">BA</option>
+                <option value="BSC">BSc</option>
+                <option value="BCOM">BCom</option>
+                <option value="BHM">BHM</option>
             </select>&nbsp;&nbsp;<button class="button" id="streamFilter">Go</button>
             </div>
     <div onclick="location.reload()"><i class="fa fa-refresh" aria-hidden="true" style="cursor: pointer;">REFRESH</i></div>
@@ -100,47 +105,34 @@
 <!-- bottom -->
 
 <section class="sectionBottom">
-    <!-- <div class="importantLinks">
-        <div class="btn-action p05 m05"><a href="#home">Home</a>
+    <div class="importantLinks" style="display: flex; flex-direction: column; background-color:black; width: 40%; align-items:center">
+        <div class="btn-action m05"><a href="/">Home</a>
         </div>
-        <div class="btn-action p05 m05"><a href="/about.html">About</a></div>
-        <div class="btn-action p05 m05"><a href="/contact.html
+        <div class="btn-action m05"><a href="/about">About</a></div>
+        <div class="btn-action m05"><a href="/contact
             ">Contact</a></div>
-        <div class="btn-action p05 m05"><a href="/pages/#colleges">Colleges</a></div>
-        <div class="btn-action p05 m05"><a href="/blogs">Bloogs</a></div>
-        <div class="btn-action p05 m05"><a href="/blogs">Bloogs</a></div>
-    </div> <div class="importantLinks">
-        <div class="btn-action p05 m05">UGC</div>
-        <div class="btn-action p05 m05">UGC</div>
-        <div class="btn-action p05 m05">UGC</div>
-        <div class="btn-action p05 m05">UGC</div>
-        <div class="btn-action p05 m05">UGC</div>
-        <div class="btn-action p05 m05">UGC</div>
-    </div> -->
-    <!-- <div class="p10 uploadCollege" style="margin: 0;">
-        <form class="" action="mailto:ahammad2reja@gmail.com">
-            <h2 style="text-align: center;">Send Request To Add / Update Your College Data</h2>
+        <div class="btn-action m05"><a href="/pages/#colleges">Colleges</a></div>
+        <div class="btn-action m05"><a href="/blogs">Bloogs</a></div>
+        <div class="btn-action m05"><a href="https://www.ugc.gov.in/" target="_blank">UGC</a></div>
+    </div>
+    <div class="p10 uploadCollege" style="margin: 0;">
+        <form class="" method="post">
+            <h2 style="text-align: center;">Send Request To Add Your College Data</h2>
             <fieldset class="bg-pri">
                 <label for="college">College Name*</label>
-                <input required type="text"><br><label for="college">Courses Available</label>
-                <input required type="text"><br>
+                <input required type="text">
+                <label for="college">Courses Available</label>
+                <input required type="text">
                 <label for="college">University Name*</label>
-                <input required type="text"><br>
+                <input required type="text">
                 <label for="college">District Name*</label>
-                <input required type="text"><br>
+                <input required type="text">
                 <label for="college">State Name*</label>
-                <input required type="text"><br><br>
-
+                <input required type="text"><br>
+                <input type="submit" class="bg-sec" value="SUBMIT">
             </fieldset>
-            <div class="p05 bg-pri" style="border: 1px solid black; ">
-                <input class="checkbox" type="checkbox" name="checkboxCollegeData" id=""><label
-                    for="checkboxCollegeData">All the information are checked</label>
-            </div>
-            <div class="p10" style="text-align: center;">
-                <button class="btn-done" style="margin: auto;">Send To Mail</button>
-            </div>
         </form>
-    </div> -->
+    </div>
 </section>
 <section class="footer">
     <footer>
