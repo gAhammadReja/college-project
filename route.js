@@ -4,7 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import College from './schema.js';
-
+import {RequestC} from './schema.js';
 const app = express();
 app.use(express.json());
 
@@ -33,19 +33,32 @@ let storage =   multer.diskStorage({
 let upload = multer({ storage : storage}).single('photo');  
 
 router.post('/addCollege', upload, async (req, res) => {
-    const colleges = new College();
-    colleges.university_name = req.body.university_name;
-    colleges.college_name = req.body.college_name;
-    colleges.department = req.body.department;
-    colleges.college_type = req.body.college_type;
-    colleges.state_name = req.body.state_name;
-    colleges.district_name = req.body.district_name;
-    colleges.admission_fees = req.body.admission_fees;
-    colleges.semester_fees = req.body.semester_fees;
-    colleges.photo = req.file.originalname;
+  const colleges = new College();
+  colleges.university_name = req.body.university_name;
+  colleges.college_name = req.body.college_name;
+  colleges.department = req.body.department;
+  colleges.college_type = req.body.college_type;
+  colleges.state_name = req.body.state_name;
+  colleges.district_name = req.body.district_name;
+  colleges.admission_fees = req.body.admission_fees;
+  colleges.semester_fees = req.body.semester_fees;
+  colleges.photo = req.file.originalname;
 
-    colleges.save();
-    res.status(201).json('success');
+  colleges.save();
+  res.status(201).json('success');
+});
+
+
+router.post('/requestCollege', async (req, res) => {
+  const requestCollege = new RequestC();
+  requestCollege.college = req.body.college;
+  requestCollege.courses = req.body.college;
+  requestCollege.district = req.body.college;
+
+  requestCollege.save();
+  res.status(201).json('success');
+
+
 });
 
   
