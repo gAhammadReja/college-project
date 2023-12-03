@@ -16,4 +16,13 @@ const collegeSchema = new mongoose.Schema({
 });
 
 const College = mongoose.model('College', collegeSchema);
+
+const requestCollege = new mongoose.Schema({
+  college: String,
+  district: String,
+  courses: String,
+});
+
+const RequestC = mongoose.model('RequestC', requestCollege);
 export default College;
+export {RequestC};
