@@ -29,27 +29,57 @@
 
 <div class="flex">
     <div class="container_one">
-        We expect to hear from you soon! Your messages are important to us, whether you have questions, feedback, or just want to say hello. By reaching out, you're contributing to the dialogue, and we value the opportunity to connect with you.<br> Feel free to use the contact form below, and we'll get back to you promptly. Your engagement is appreciated, and we look forward to hearing from you!    </div>
+        We expect to hear from you soon! Your messages are important to us, whether you have questions, feedback, or just want to say hello. By reaching out, you're contributing to the dialogue, and we value the opportunity to connect with you.<br> Feel free to use the contact form below, and we'll get back to you promptly. Your engagement is appreciated, and we look forward to hearing from you!
+ 
+    </div>
     <div class="container">
-        <form action="#" method="post">
+        <form id="contactUs" method="post">
             <label for="first-name">Enter Your Full Name</label>
-            <input type="text" id="first-name" name="first-name" required>
+            <input type="text" id="first-name" name="cname" required>
 
             <label for="PhoneNumber">Phone Number</label>
-            <input type="text" id="PhoneNumber" name="PhoneNumber" maxlength="10" minlength="10" required>
+            <input type="text" id="PhoneNumber" name="cphone" maxlength="10" minlength="10" required>
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="cemail" required>
 
             <label for="message">Write your message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="cmsg" rows="6" required></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit" id="csubmit">Submit</button>
         </form>
     </div>
 </div>
 <script src="/script/index.js"></script>
+<script src="/script/mailer.js"></script>
 <script src="https://kit.fontawesome.com/4d4b411082.js" crossorigin="anonymous"></script>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>Explore a vast database of colleges spanning diverse disciplines, from engineering and medicine to arts and social sciences. Each college profile offers key information such as courses offered, admission criteria, campus facilities, faculty credentials, and more.
+            </p>
+        </div>
 
+        <div class="footer-section contact">
+            <h2>Contact Information</h2>
+            <p>Email: bwebsite865@gmail.com</p>
+            <p>Phone: +91 7501728816</p>
+        </div>
+
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2023 Class Buddy JR. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>
