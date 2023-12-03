@@ -8,7 +8,7 @@
     <meta name="keywords" content="Colpedia College Buddy, colleges, education, courses, admission criteria, India">
     <meta name="author" content="Golam Ahammad Reja">
     
-    <title>Document</title>
+    <title>Colepediya Class Buddy</title>
     <link rel="stylesheet" href="css/index.css">
     <style>
 .btn-action{
@@ -16,6 +16,7 @@
     font-size: 1rem;
 }
     </style>
+    <link rel="shortcut icon" href="/logo.jpg" type="image/jpg">
 </head>
 <body contenteditable="false">
     <div class="main" id="home">
@@ -111,44 +112,65 @@
         <div class="btn-action m05"><a href="/about">About</a></div>
         <div class="btn-action m05"><a href="/contact
             ">Contact</a></div>
-        <div class="btn-action m05"><a href="/pages/#colleges">Colleges</a></div>
+        <div class="btn-action m05"><a href="/#colleges">Colleges</a></div>
         <div class="btn-action m05"><a href="/blogs">Bloogs</a></div>
         <div class="btn-action m05"><a href="https://www.ugc.gov.in/" target="_blank">UGC</a></div>
     </div>
     <div class="p10 uploadCollege" style="margin: 0;">
-        <form class="" method="post">
+        <form id="collegeForm" action="/requestCollege" method="post">
             <h2 style="text-align: center;">Send Request To Add Your College Data</h2>
             <fieldset class="bg-pri">
                 <label for="college">College Name*</label>
-                <input required type="text">
+                <input required type="text" name="college">
                 <label for="college">Courses Available</label>
-                <input required type="text">
-                <label for="college">University Name*</label>
-                <input required type="text">
+                <input required type="text" name="courses">
                 <label for="college">District Name*</label>
-                <input required type="text">
-                <label for="college">State Name*</label>
-                <input required type="text"><br>
-                <input type="submit" class="bg-sec" value="SUBMIT">
+                <input required type="text" name="district"><br>
+                <input type="submit" id="req-button" class="bg-sec" value="SUBMIT">
             </fieldset>
         </form>
     </div>
 </section>
-<section class="footer">
     <footer>
-        copyrights&copy; reserved by classBuudyJr 2023
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <p>Explore a vast database of colleges spanning diverse disciplines, from engineering and medicine to arts and social sciences. Each college profile offers key information such as courses offered, admission criteria, campus facilities, faculty credentials, and more.
+                    </p>
+                </div>
+        
+                <div class="footer-section contact">
+                    <h2>Contact Information</h2>
+                    <p>Email: bwebsite865@gmail.com</p>
+                    <p>Phone: +91 7501728816</p>
+                </div>
+        
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2023 Class Buddy JR. All rights reserved.</p>
+            </div>
     </footer>
-</section>
+
 </section>
 
 <!-- bottom end -->
 
 
 <script src="https://kit.fontawesome.com/4d4b411082.js" crossorigin="anonymous"></script>
+
 </body>
 
-<!-- <script src="/data/node.js"></script> -->
 <script src="script/index.js"></script>
+<script src="script/requestCollege.js"></script>
 <script>
     //javascript
 </script>
