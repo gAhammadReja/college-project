@@ -10,7 +10,8 @@ function myCollege(college,photo,college_type,semester_fees,addmission_fees,depa
     state = state.toUpperCase();
     let MySrc = "https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q="+college+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
     document.getElementById('colleges').innerHTML=`
-      <div class="college-profile">
+      <div>
+<div class="college-profile">
         <h1 class="college-name">My College</h1>
         <div class="college-info">
             <img src="https://collegeserver.onrender.com/photos/${photo}" alt="Welcome To My College">
@@ -32,6 +33,7 @@ function myCollege(college,photo,college_type,semester_fees,addmission_fees,depa
             </div>
         </div>
     </div>
+      </div>
     `;
 }
 function toggle(id){
