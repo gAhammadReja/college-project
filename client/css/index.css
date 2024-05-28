@@ -224,3 +224,89 @@ font-size: 11px;
     color: rgb(56, 5, 104);
     border-radius: 4px;
 }
+
+
+
+
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.college-profile {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.college-name {
+    background-color: #0078D4;
+    color: white;
+    padding: 0.5rem;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.college-info {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+    flex: 1;
+    margin-top: 20px; /* Add space between image and map on small screens */
+    position: relative;
+    height: 300px;
+}
+
+.map-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.details {
+    flex: 1;
+    margin-top: 20px; /* Add space between map and details on small screens */
+}
+
+.favorite {
+    font-size: 24px;
+    color: #E81123;
+    margin-top: 20px; /* Add space between details and favorite icon on small screens */
+    cursor: pointer;
+}
+
+.heart-icon {
+    user-select: none;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    .college-info {
+        flex-direction: row; /* Revert to horizontal layout on small screens */
+        justify-content: space-between;
+    }
+    .map-container,
+    .details {
+        margin-top: 0; /* Remove extra margin on small screens */
+    }
+}
+
