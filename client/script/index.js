@@ -10,28 +10,28 @@ function myCollege(college,photo,college_type,semester_fees,addmission_fees,depa
     state = state.toUpperCase();
     let MySrc = "https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q="+college+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
     document.getElementById('colleges').innerHTML=`
-    <div>
-    <h1 style="background-color: #0078D4; color: white; padding: 0.5rem;">${college}</h1>
-    <div class="profile">
-        <img src="https://collegeserver.onrender.com/photos/${photo}" alt="Welcome To ${college}" style="max-width: 100%; height: auto;">
-        <div class="mapouter" style="position: relative; text-align: right; height: 300px;">
-            <div class="gmap_canvas">
-                <iframe class="gmap_iframe" frameborder="0" scrolling="no"
+      <div class="college-profile">
+        <h1 class="college-name">My College</h1>
+        <div class="college-info">
+            <img src="https://collegeserver.onrender.com/photos/${photo}" alt="Welcome To My College">
+            <div class="map-container">
+                <iframe class="map-iframe" frameborder="0" scrolling="no"
                     marginheight="0" marginwidth="0"
-                    src="${MySrc}" style="width: 100%; height: 100%; border: none;"></iframe>
+                    src="${MySrc}" allowfullscreen></iframe>
+            </div>
+            <div class="details">
+                <p>College Type: ${college_type}</p>
+                <p>Semester Fees: ${semester_fees}</p>
+                <p>Admission Fees: ${admission_fees}</p>
+                <p>Departments: ${department}</p>
+                <p>District Name: ${district}</p>
+                <p>State Name: ${state}</p>
+            </div>
+            <div class="favorite">
+                <span class="heart-icon">&#10084;</span> <!-- Heart icon for favorites -->
             </div>
         </div>
     </div>
-    <div style="display: flex; flex-wrap: wrap;">
-        <div style="margin: 0.5rem; font-size: 16px;">College Type: ${college_type}</div>
-        <div style="margin: 0.5rem; font-size: 16px;">Semester Fees: ${semester_fees}</div>
-        <div style="margin: 0.5rem; font-size: 16px;">Admission Fees: ${addmission_fees}</div>
-        <div style="margin: 0.5rem; font-size: 16px;">Departments: ${department}</div>
-        <div style="margin: 0.5rem; font-size: 16px;">District Name: ${district}</div>
-        <div style="margin: 0.5rem; font-size: 16px;">State Name: ${state}</div>
-    </div>
-    <h2 onclick="filterCollege('https://collegeserver.onrender.com/filter')" style="cursor: pointer; background-color: #E81123; color: white; padding: 0.5rem; border: none; border-radius: 4px;">BACK</h2>
- </div>
     `;
 }
 function toggle(id){
