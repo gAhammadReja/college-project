@@ -11,27 +11,27 @@ function myCollege(college,photo,college_type,semester_fees,addmission_fees,depa
     let MySrc = "https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q="+college+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
     document.getElementById('colleges').innerHTML=`
     <div>
-<h1 class="bg-pri p05">${college}</h1>
-<div class="profile">
-<img src='https://collegeserver.onrender.com/photos/${photo}' alt="Welcome To ${college}" class="profileImage">
-<div class="mapouter">
-<div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no"
-        marginheight="0" marginwidth="0"
-        src="${MySrc}"></iframe>
+    <h1 style="background-color: #0078D4; color: white; padding: 0.5rem;">${college}</h1>
+    <div class="profile">
+        <img src="https://collegeserver.onrender.com/photos/${photo}" alt="Welcome To ${college}" style="max-width: 100%; height: auto;">
+        <div class="mapouter" style="position: relative; text-align: right; height: 300px;">
+            <div class="gmap_canvas">
+                <iframe class="gmap_iframe" frameborder="0" scrolling="no"
+                    marginheight="0" marginwidth="0"
+                    src="${MySrc}" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </div>
     </div>
-</div>
-   <div>
-</div>
-<div style="display:flex;flex-wrap:wrap">
-<div class="CollegeDetails">College Type : ${college_type}</div>
-<div class="CollegeDetails">Semester Fees : ${semester_fees}</div>
-<div class="CollegeDetails">Addmission Fees : ${addmission_fees}</div>
-<div class="CollegeDetails">Depertments : ${department}</div>
-<div class="CollegeDetails">District Name : ${district}</div>
-<div class="CollegeDetails">State Name : ${state}</div>
-</div>
-<h2 class="btn-cancel" onclick="filterCollege('https://collegeserver.onrender.com/filter')"> BACK </h2>
+    <div style="display: flex; flex-wrap: wrap;">
+        <div style="margin: 0.5rem; font-size: 16px;">College Type: ${college_type}</div>
+        <div style="margin: 0.5rem; font-size: 16px;">Semester Fees: ${semester_fees}</div>
+        <div style="margin: 0.5rem; font-size: 16px;">Admission Fees: ${addmission_fees}</div>
+        <div style="margin: 0.5rem; font-size: 16px;">Departments: ${department}</div>
+        <div style="margin: 0.5rem; font-size: 16px;">District Name: ${district}</div>
+        <div style="margin: 0.5rem; font-size: 16px;">State Name: ${state}</div>
     </div>
+    <h2 onclick="filterCollege('https://collegeserver.onrender.com/filter')" style="cursor: pointer; background-color: #E81123; color: white; padding: 0.5rem; border: none; border-radius: 4px;">BACK</h2>
+ </div>
     `;
 }
 function toggle(id){
