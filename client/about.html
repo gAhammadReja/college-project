@@ -6,99 +6,249 @@
     <title>About Our College</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Playfair+Display:wght@400;700&family=Rajdhani:wght@400;600&family=Tilt+Prism&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/css/about.css">
+    <style>
+        /* @import url('/css/utility.css'); */
+        /* @import url('/css/onLoading.css'); */
 
-</head>
-<body>
-    
-    <div class="nav">
-    <h2>Colpedia College Buddy</h2><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Our College</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Tilt+Prism&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/css/about.css">
+        body {
+            font-family: 'Rajdhani', sans-serif;
+        }
 
-</head>
-<body>
-    
-    <div class="nav">
-    <h2>Colpedia College Buddy</h2>
-   <div class="menuBar" onclick="toggle('btns')">Menu</div>
-    <div class="btns none" id="btns">
-        <button><a href="/">Home</a></button>
-        <button><a href="/about">About</a></button>
-        <button><a href="/contact">Contact</a></button>
-        <button><a href="/blogs" target="_blank">Blogs</a></button>
-        <button><a href="/login"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></button>
+        header {
+            font-family: 'Playfair Display', serif;
+            color: rgb(242, 240, 244);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 50px;
+            background-image: url(https://centralpineneedle.files.wordpress.com/2015/12/7184997758_887b639a09_k.jpg);
+            background-size: cover;
+            background-position: center;
+            text-shadow: 2px 2px 10px pink;
+        }
 
-    </div>
-</div>
-    
-    <header>
-        <b>
-        COLPEDIA COLLEGE BUDDY<br>
-                <img src="logo.jpg" alt="Choise Your Image">
-                <br>
-                
-            EST.-2023</b><BR>
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #cefdf37c;
+            box-shadow: 2px 2px 15px black;
+            border-radius: 5px;
+            margin-top: 20px;
+            background-image: url(https://th.bing.com/th/id/R.5d0134ac2f1c1c3e9943c4edbe85b4c1?rik=0qzjyRNZkY8abg&riu=http%3a%2f%2fgoddesshealings.com%2fwp-content%2fuploads%2f2010%2f07%2fsky.jpg&ehk=hyGShEZc4v1xdmkzbD0280tACfeb68tBT03cfkE%2fvLY%3d&risl=&pid=ImgRaw&r=0);
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 500;
+        }
+
+        h2 {
+            display: grid;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://th.bing.com/th/id/OIP.iC3toMmo3o9xiRgGVERU5gHaE8?w=247&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+            background-size: cover;
+            background-position: center;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        h2::selection {
+            color: red;
+            background-color: #fff;
+        }
+
+        /* h3, p, .text {
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        } */
+
+        img {
+            height: 100px;
+            width: 100px;
+            clip-path: circle();
+        }
+
+        .text {
+            display: block;
+            text-align: right;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        body::-webkit-scrollbar {
+            background-color: transparent;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: linear-gradient(orange, white, green);
+            border-radius: 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #200606;
+            color: white;
             
-        <h1><b>About Our Website</b></h1>
-    </header>
-    <div class="container">
-        <h2>Welcome to COLPEDIA COLLEGE BUDDY</h2>
-        <hr  width="100%" >
+        }
+        .btns :hover{
+            color: rgb(11, 255, 255);
+            background-color: rgb(203, 119, 200);
+            transition: all ease-in-out 1s;
+        }
+        .btns button :hover{
+            box-shadow: 0 4px 8px rgba(243, 243, 243, 0.1);
+
+        }
+
+        .menuBar {
+            cursor: pointer;
+            display: none;
+        }
+
+        .btns {
+            display: flex;
+            box-shadow: 0 4px 8px rgba(243, 243, 243, 0.1);
+        }
+
+        .btns button {
+            background: none;
+            /* border: none; */
+            margin: 0 10px;
+            border: 3px solid rgba(255, 255, 255, 0.326);
+            font-size: 20px;
+            border-radius: 20px;
+           
+        }
+
+        .btns a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .btns.none {
+            display: none;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .footer-section {
+            width: 30%;
+        }
+
+        .footer-section h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+            color: white;
+        }
         
-        <h3><i>Our Aim:</i></h3>
-        <p>
-            Our aim is to provide quality education and foster an environment of academic excellence, innovation, and personal growth. We want that you can find the sweetable College or University according to you choise. 
-        </p>
-        <h3><i>Our Vision:</i></h3>
-        <p>
-            At COLPEDIA COLLEGE BUDDY, we envision a future where education knows no boundaries. We believe that everyone should have access to high-quality learning materials and opportunities, regardless of their location or circumstances. Our vision is to bridge gaps in education by providing a platform that fosters curiosity, critical thinking, and a lifelong love for learning.
-        </p>
-        <h3><i>Our Commitment:</i></h3>
-        <p><b>(i) <u>Accessibility:</b></u> 
-            <br>We are committed to making education accessible to all. Our website is designed with user-friendly navigation and features that cater to diverse learning needs. We are continuously working to ensure our content is available to individuals with different abilities.<br><br>
-           <b>(ii) <u>Quality:</u><br></b>
-            We are dedicated to delivering accurate, reliable, and high-quality content. Our rigorous review processes and partnerships with experts ensure that the information you receive is trustworthy and valuable.<br><br>
-           <b> (iii) <u> Continuous Improvement:</u><br> </b>
-            Education is a constantly evolving field, and we are committed to staying ahead of the curve. We regularly update our content to reflect the latest advancements, discoveries, and best practices in education.
-        </p>
-        <h3><i>Join Us On This Journey:</i></h3>
-        <p>Whether you're a student, an educator, a lifelong learner, or someone who simply believes in the power of education, we invite you to join us on this exciting journey. Together, we can unlock the doors of opportunity and shape a brighter future through knowledge.</p>
-        <div class="text">
-           <b>
-            <i> 
-                Thank You for being a part of COLPEDIA COLLEGE BUDDY<BR>
-                Sincerely,<br>
-                Kaustav Datta, Golam Ahammed Reja, Md. Sarif Ali, Suman Haldar<br>
-                (Founders of COLPEDIA COLLEGE BUDDY)
-                </i>
-                </b>
+
+        @media (max-width: 768px) {
+            .btns {
+                display: none;
+            }
+
+            .menuBar {
+                display: block;
+            }
+
+            .btns.active {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>Colpedia College Buddy</h2>
+        <div class="menuBar" onclick="toggleMenu()">Menu</div>
+        <div class="btns" id="btns">
+            <button><a href="/">Home</a></button>
+            <button><a href="/about">About</a></button>
+            <button><a href="/contact">Contact</a></button>
+            <button><a href="/blogs" target="_blank">Blogs</a></button>
+            <button><a href="login.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></button>
         </div>
     </div>
+
+    <header>
+        <b>COLPEDIA COLLEGE BUDDY<br>
+        <img src="https://collegeserver.onrender.com/logo.jpg" alt="Choose Your Image"><br>
+        EST.-2023</b><br>
+        <h1><b>About Our Website</b></h1>
+    </header>
+
+    <div class="container">
+        <h2>Welcome to COLPEDIA COLLEGE BUDDY</h2>
+        <hr width="100%">
+
+        <h3><i>Our Aim:</i></h3>
+        <p>Our aim is to provide quality education and foster an environment of academic excellence, innovation, and personal growth. We want you to find the suitable College or University according to your choice.</p>
+
+        <h3><i>Our Vision:</i></h3>
+        <p>At COLPEDIA COLLEGE BUDDY, we envision a future where education knows no boundaries. We believe that everyone should have access to high-quality learning materials and opportunities, regardless of their location or circumstances. Our vision is to bridge gaps in education by providing a platform that fosters curiosity, critical thinking, and a lifelong love for learning.</p>
+
+        <h3><i>Our Commitment:</i></h3>
+        <p><b>(i) <u>Accessibility:</u></b><br>
+            We are committed to making education accessible to all. Our website is designed with user-friendly navigation and features that cater to diverse learning needs. We are continuously working to ensure our content is available to individuals with different abilities.<br><br>
+           <b>(ii) <u>Quality:</u></b><br>
+            We are dedicated to delivering accurate, reliable, and high-quality content. Our rigorous review processes and partnerships with experts ensure that the information you receive is trustworthy and valuable.<br><br>
+           <b>(iii) <u>Continuous Improvement:</u></b><br>
+            Education is a constantly evolving field, and we are committed to staying ahead of the curve. We regularly update our content to reflect the latest advancements, discoveries, and best practices in education.
+        </p>
+
+        <h3><i>Join Us On This Journey:</i></h3>
+        <p>Whether you're a student, an educator, a lifelong learner, or someone who simply believes in the power of education, we invite you to join us on this exciting journey. Together, we can unlock the doors of opportunity and shape a brighter future through knowledge.</p>
+
+        <div class="text">
+            <b><i>Thank You for being a part of COLPEDIA COLLEGE BUDDY<br>
+            Sincerely,<br>
+            Kaustav Datta, Golam Ahammed Reja, Md. Sarif Ali, Suman Haldar<br>
+            (Founders of COLPEDIA COLLEGE BUDDY)</i></b>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <h2>About Us</h2>
-                <p>Explore a vast database of colleges spanning diverse disciplines, from engineering and medicine to arts and social sciences. Each college profile offers key information such as courses offered, admission criteria, campus facilities, faculty credentials, and more.
-                </p>
+                <p>Explore a vast database of colleges spanning diverse disciplines, from engineering and medicine to arts and social sciences. Each college profile offers key information such as courses offered, admission criteria, campus facilities, faculty credentials, and more.</p>
             </div>
-    
+
             <div class="footer-section contact">
                 <h2>Contact Information</h2>
                 <p>Email: bwebsite865@gmail.com</p>
                 <p>Phone: +91 7501728816</p>
             </div>
-    
+
             <div class="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
@@ -108,71 +258,18 @@
                 </ul>
             </div>
         </div>
-    
+
         <div class="footer-bottom">
             <p>&copy; 2023 Class Buddy JR. All rights reserved.</p>
         </div>
     </footer>
-<script src="https://kit.fontawesome.com/4d4b411082.js" crossorigin="anonymous"></script>
 
+    <script src="https://kit.fontawesome.com/4d4b411082.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleMenu() {
+            const btns = document.getElementById('btns');
+            btns.classList.toggle('active');
+        }
+    </script>
 </body>
-</html>
-
-   <div class="menuBar" onclick="toggle('btns')">Menu</div>
-    <div class="btns none" id="btns">
-        <button><a href="/">Home</a></button>
-        <button><a href="/about">About</a></button>
-        <button><a href="/contact">Contact</a></button>
-        <button><a href="/blogs" target="_blank">Blogs</a></button>
-        <button><a href="/login"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></button>
-
-    </div>
-</div>
-    
-    <header>
-        <b>
-        COLPEDIA COLLEGE BUDDY<br>
-                <img src="logo.jpg" alt="Choise Your Image">
-                <br>
-                
-            EST.-2023</b><BR>
-            
-        <h1><b>About Our Website</b></h1>
-    </header>
-    <div class="container">
-        <h2>Welcome to COLPEDIA COLLEGE BUDDY</h2>
-        <hr  width="100%" >
-        
-        <h3><i>Our Aim:</i></h3>
-        <p>
-            Our aim is to provide quality education and foster an environment of academic excellence, innovation, and personal growth. We want that you can find the sweetable College or University according to you choise. 
-        </p>
-        <h3><i>Our Vision:</i></h3>
-        <p>
-            At COLPEDIA COLLEGE BUDDY, we envision a future where education knows no boundaries. We believe that everyone should have access to high-quality learning materials and opportunities, regardless of their location or circumstances. Our vision is to bridge gaps in education by providing a platform that fosters curiosity, critical thinking, and a lifelong love for learning.
-        </p>
-        <h3><i>Our Commitment:</i></h3>
-        <p><b>(i) <u>Accessibility:</b></u> 
-            <br>We are committed to making education accessible to all. Our website is designed with user-friendly navigation and features that cater to diverse learning needs. We are continuously working to ensure our content is available to individuals with different abilities.<br><br>
-           <b>(ii) <u>Quality:</u><br></b>
-            We are dedicated to delivering accurate, reliable, and high-quality content. Our rigorous review processes and partnerships with experts ensure that the information you receive is trustworthy and valuable.<br><br>
-           <b> (iii) <u> Continuous Improvement:</u><br> </b>
-            Education is a constantly evolving field, and we are committed to staying ahead of the curve. We regularly update our content to reflect the latest advancements, discoveries, and best practices in education.
-        </p>
-        <h3><i>Join Us On This Journey:</i></h3>
-        <p>Whether you're a student, an educator, a lifelong learner, or someone who simply believes in the power of education, we invite you to join us on this exciting journey. Together, we can unlock the doors of opportunity and shape a brighter future through knowledge.</p>
-        <div class="text">
-           <b>
-            <i> 
-                Thank You for being a part of COLPEDIA COLLEGE BUDDY<BR>
-                Sincerely,<br>
-                Kaustav Datta, Golam Ahammed Reja, Md. Sarif Ali, Suman Haldar<br>
-                (Founders of COLPEDIA COLLEGE BUDDY)
-                </i>
-                </b>
-        </div>
-    </div>
-<script src="https://kit.fontawesome.com/4d4b411082.js" crossorigin="anonymous"></script>
-
-</body>
-</html>
+                </html>
