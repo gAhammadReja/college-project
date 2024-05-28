@@ -10,30 +10,28 @@ function myCollege(college,photo,college_type,semester_fees,addmission_fees,depa
     state = state.toUpperCase();
     let MySrc = "https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q="+college+"&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed";
     document.getElementById('colleges').innerHTML=`
-      <div>
-<div class="college-profile">
-        <h1 class="college-name">My College</h1>
-        <div class="college-info">
-            <img src="https://collegeserver.onrender.com/photos/${photo}" alt="Welcome To My College">
-            <div class="map-container">
-                <iframe class="map-iframe" frameborder="0" scrolling="no"
-                    marginheight="0" marginwidth="0"
-                    src="${MySrc}" allowfullscreen></iframe>
-            </div>
-            <div class="details">
-                <p>College Type: ${college_type}</p>
-                <p>Semester Fees: ${semester_fees}</p>
-                <p>Admission Fees: ${admission_fees}</p>
-                <p>Departments: ${department}</p>
-                <p>District Name: ${district}</p>
-                <p>State Name: ${state}</p>
-            </div>
-            <div class="favorite">
-                <span class="heart-icon">&#10084;</span> <!-- Heart icon for favorites -->
-            </div>
-        </div>
+    <div>
+<h1 class="bg-pri p05">${college}</h1>
+<div class="profile">
+<img src='https://collegeserver.onrender.com/photos/${photo}' alt="Welcome To ${college}" class="profileImage">
+<div class="mapouter">
+<div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no"
+        marginheight="0" marginwidth="0"
+        src="${MySrc}"></iframe>
     </div>
-      </div>
+</div>
+   <div>
+</div>
+<div style="display:flex;flex-wrap:wrap">
+<div class="CollegeDetails">College Type : ${college_type}</div>
+<div class="CollegeDetails">Semester Fees : ${semester_fees}</div>
+<div class="CollegeDetails">Addmission Fees : ${addmission_fees}</div>
+<div class="CollegeDetails">Depertments : ${department}</div>
+<div class="CollegeDetails">District Name : ${district}</div>
+<div class="CollegeDetails">State Name : ${state}</div>
+</div>
+<h2 class="btn-cancel" onclick="filterCollege('https://collegeserver.onrender.com/filter')"> BACK </h2>
+    </div>
     `;
 }
 function toggle(id){
