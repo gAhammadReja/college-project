@@ -77,7 +77,7 @@ app.post('/contact',(req,res)=>{
 
     const TheMail = {
         from: cname,
-        to:'bwebsite865@gmail.com',
+        to:'kaustavdatta02@gmail.com',
         subject:'MCET USER CONTACT',
         html:`
         <h3>NAME : ${cname}</h3>
